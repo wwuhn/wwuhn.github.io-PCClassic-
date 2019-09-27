@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+TML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base target="_blank" />
@@ -663,4 +663,74 @@ void swap_v1(int* val_1, int* val_2)
 <p>gio-2.0.lib glib-2.0.lib gthread-2.0.lib gmodule-2.0.lib gobject-2.0.lib</p>
 <p>通用属性->C/C++->代码生成->运行库开启多线程/MT</p>
 <p>Okay！成了</p>
-<p>A union is a struct in which all members are allocated at the same address so that the union occupies  only as much space as its largest member. Naturally, a union can hold a value for only one  member at a time.</p><p>预定义指针到设备文件（键盘或显示器）的FILE常量：</p><p>指向FILE常量的指针：设备文件</p><p>stdin：键盘</p><p>stdout：显示器</p><p>stderr：显示器</p><p>m=fgetc(stdin);</p><p>从指向FILE常量stdin(即键盘）的指针指定的文件中读取一个字符，并返回其ASCII值，该值赋值给m。</p><p>fputc(m,stdout);将字符（其ASCII值存储在m中）写入由FILE常量stdout指针指定的文件（显示器</p><p>m=fgetc(stdin);从指向FILE常量stdin(键盘)的指针指定的文件中读取一个字符，并返回其ASCII值，该值赋给m</p><p>函数是子程序，它允许你将大型计算任务分解为较小的计算任务；</p><p>函数是由大括号分隔的一段代码，它执行一些明确定义的任务并返回一个值；</p><p>函数是程序的构建块，它有助于使现有代码可重用。</p><p>函数也可以视为C中的派生类型。</p><p>函数是扩展C语言库的一种方法。</p><p>The C Standard strncpy() function is frequently recommended as an  alternative to the strcpy() function. Unfortunately, strncpy() is prone to  null-termination errors and other problems and consequently is not considered  to be a secure alternative to strcpy().</p><p>系统在主存中开辟一个专用的内存区域用来临时存放输入/输出信息，这种内存区域称为缓冲区。输入/输出流可以是缓冲的，也可以是非缓冲的。引入缓冲的目的是为了提高系统的效率。通常情况使用缓冲流.</p><p>程序库：头文件（库函数原型，由编译器来做类型检查）+库文件（函数实现，由链接器链接，将代码复制到可执行文件中）。</p><p>VC++提供了一个名为comment的指令，它可以搭配lib选项给链接器发送一个特定信息，以链接特定的程序库。因此头文件中的代码：</p><p></p><p>#pragma comment(lib, "mylib")</p><p></p><p>将告知链接器链接程序库mylib。一般来说，最好使用项目管理工具，比如nmake或者MSBuild，用于确保将正确的程序库链接到项目中。</p><p></p><p>大部分C运行时库是以如下方式实现的，在一个静态库或者动态链接库中编译函数，然后在头文件中声明函数原型。开发人员在链接器命令行中提供了程序库，通常还将为该程序库引用头文件，以便编译器能够访问函数原型。只要链接器能够识别该程序库，就可以在项目代码中输入其函数原型（将它定义为外部链接，以便告知编译器函数是在其他地方定义的）。这样可以省去将某些大型文件引入到源代码中的麻烦，因为这些文件中很有可能包含大量不会用到的函数原型。</p><p>cout &lt;&lt; "long最大值：" &lt;&lt; (numeric_limits<long>::max)(); //#include &lt;limits></p><p>变量声明向编译器保证变量以给定的类型和名称存在，这样编译器在不需要知道变量完整细节的情况下也能继续进一步的编译。变量声明只在编译时有它的意义，在程序连接时编译器需要实际的变量声明。</p><p></p><p>当您使用多个文件且只在其中一个文件中定义变量时（定义变量的文件在程序连接时是可用的），变量声明就显得非常有用。您可以使用 extern 关键字在任何地方声明一个变量。虽然您可以在 C++ 程序中多次声明一个变量，但变量只能在某个文件、函数或代码块中被定义一次。</p><p>在函数或一个代码块（非控制结构的{}块，控制结构只是一条语句）内部声明的变量，称为局部变量。</p><p>一般情况下，系统为全局变量分配的存储空间在程序运行的过程中一般是不改变的，而为局部变量分配的存储单元是动态改变的。</p><p>变量是什么？是一个存储数据的内存单元，用变量名显式表示其内容值，变量包括右值和右值。其地址也可以称为指针，可以用一个指针变量来显式地引用地址值。</p><p>通过指针访问字符串常量：</p><p>char* str="hellow";</p><p>参数传递：在调用函数与被调函数之间的数据复制、读、写；</p><p>函数调用时，形参会在栈帧上开辟内存单元，放置实参的值或地址。如果是地址，才是对调用函数内部的变量形成间接访问。</p><p>函数执行过程</p><p>在主程序中计算每个实际参数值</p><p>用实际参数值初始化形式参数</p><p>依次执行函数体的每个语句，直到遇见return语句或函数体结束</p><p>计算return后面的表达式的值，用表达式的值构造一个临时变量</p><p>回到调用函数，用临时变量置换函数调用，继续主程序的执行</p><p>函数可以将一段完成独立功能的程序封装起来。通过函数名就可执行这一段功能。使用函数可以将程序模块化</p><p>What are pointers for </p><p></p><p>Accessing array elements.</p><p></p><p>Passing arguments to a function when the function needs to modify the original argument.</p><p></p><p>Passing arrays and strings to functions.</p><p></p><p>Obtaining memory from the system.</p><p></p><p>Creating data structures such as linked lists.</p><p>Generally, system programmers aren’t willing to pay overhead for programming  convenience, so C adheres to the zero-overhead principle: what  you don’t use, you don’t pay for. The strong type system is a prime example of  a zero-overhead abstraction. It’s used only at compile time to check for program  correctness. After compile time, the types will have disappeared, and  the emitted assembly code will show no trace of the type system.</p><p>The first argument to printf is always a format string. The format string  provides a template for the string to be printed, and it contains any number  of special format specifiers. Format specifiers tell printf how to interpret  and format the arguments following the format string. All format specifiers  begin with %.</p><p>For example, the format specifier for an int is %d. Whenever printf sees  a %d in the format string, it knows to expect an int argument following the  format specifier. Then printf replaces the format specifier with the argument’s  actual value.</p><p>Operators are functions that perform computations on operands. Operands  are simply objects.</p><p>const wchar_t* ws = L"中文abc";</p><p></p><p></p><p>大写的L是告诉编译器：这是宽字符串。所以，这时候是需要编译器根据locale来进行翻译的。</p><p>左值一般在内存，右值一般在寄存器。</p><p>左值：可寻址的非只读表达式；</p>
+<p>A union is a struct in which all members are allocated at the same address so that the union occupies  only as much space as its largest member. Naturally, a union can hold a value for only one  member at a time.</p>
+<p>预定义指针到设备文件（键盘或显示器）的FILE常量：</p>
+<p>指向FILE常量的指针：设备文件</p>
+<p>stdin：键盘</p>
+<p>stdout：显示器</p>
+<p>stderr：显示器</p>
+<p>m=fgetc(stdin);</p>
+<p>从指向FILE常量stdin(即键盘）的指针指定的文件中读取一个字符，并返回其ASCII值，该值赋值给m。</p>
+<p>fputc(m,stdout);将字符（其ASCII值存储在m中）写入由FILE常量stdout指针指定的文件（显示器</p>
+<p>m=fgetc(stdin);从指向FILE常量stdin(键盘)的指针指定的文件中读取一个字符，并返回其ASCII值，该值赋给m</p>
+<p>函数是子程序，它允许你将大型计算任务分解为较小的计算任务；</p>
+<p>函数是由大括号分隔的一段代码，它执行一些明确定义的任务并返回一个值；</p>
+<p>函数是程序的构建块，它有助于使现有代码可重用。</p>
+<p>函数也可以视为C中的派生类型。</p>
+<p>函数是扩展C语言库的一种方法。</p>
+<p>The C Standard strncpy() function is frequently recommended as an  alternative to the strcpy() function. Unfortunately, strncpy() is prone to  null-termination errors and other problems and consequently is not considered  to be a secure alternative to strcpy().</p>
+<p>系统在主存中开辟一个专用的内存区域用来临时存放输入/输出信息，这种内存区域称为缓冲区。输入/输出流可以是缓冲的，也可以是非缓冲的。引入缓冲的目的是为了提高系统的效率。通常情况使用缓冲流.</p>
+<p>程序库：头文件（库函数原型，由编译器来做类型检查）+库文件（函数实现，由链接器链接，将代码复制到可执行文件中）。</p>
+<p>VC++提供了一个名为comment的指令，它可以搭配lib选项给链接器发送一个特定信息，以链接特定的程序库。因此头文件中的代码：</p>
+<p></p>
+<p>#pragma comment(lib, "mylib")</p>
+<p></p>
+<p>将告知链接器链接程序库mylib。一般来说，最好使用项目管理工具，比如nmake或者MSBuild，用于确保将正确的程序库链接到项目中。</p>
+<p></p>
+<p>大部分C运行时库是以如下方式实现的，在一个静态库或者动态链接库中编译函数，然后在头文件中声明函数原型。开发人员在链接器命令行中提供了程序库，通常还将为该程序库引用头文件，以便编译器能够访问函数原型。只要链接器能够识别该程序库，就可以在项目代码中输入其函数原型（将它定义为外部链接，以便告知编译器函数是在其他地方定义的）。这样可以省去将某些大型文件引入到源代码中的麻烦，因为这些文件中很有可能包含大量不会用到的函数原型。</p>
+<p>cout &lt;&lt; "long最大值：" &lt;&lt; (numeric_limits<long>::max)(); //#include &lt;limits></p>
+<p>变量声明向编译器保证变量以给定的类型和名称存在，这样编译器在不需要知道变量完整细节的情况下也能继续进一步的编译。变量声明只在编译时有它的意义，在程序连接时编译器需要实际的变量声明。</p>
+<p></p>
+<p>当您使用多个文件且只在其中一个文件中定义变量时（定义变量的文件在程序连接时是可用的），变量声明就显得非常有用。您可以使用 extern 关键字在任何地方声明一个变量。虽然您可以在 C++ 程序中多次声明一个变量，但变量只能在某个文件、函数或代码块中被定义一次。</p>
+<p>在函数或一个代码块（非控制结构的{}块，控制结构只是一条语句）内部声明的变量，称为局部变量。</p>
+<p>一般情况下，系统为全局变量分配的存储空间在程序运行的过程中一般是不改变的，而为局部变量分配的存储单元是动态改变的。</p>
+<p>变量是什么？是一个存储数据的内存单元，用变量名显式表示其内容值，变量包括右值和右值。其地址也可以称为指针，可以用一个指针变量来显式地引用地址值。</p>
+<p>通过指针访问字符串常量：</p>
+<p>char* str="hellow";</p>
+<p>参数传递：在调用函数与被调函数之间的数据复制、读、写；</p>
+<p>函数调用时，形参会在栈帧上开辟内存单元，放置实参的值或地址。如果是地址，才是对调用函数内部的变量形成间接访问。</p>
+<p>函数执行过程</p>
+<p>在主程序中计算每个实际参数值</p>
+<p>用实际参数值初始化形式参数</p>
+<p>依次执行函数体的每个语句，直到遇见return语句或函数体结束</p>
+<p>计算return后面的表达式的值，用表达式的值构造一个临时变量</p>
+<p>回到调用函数，用临时变量置换函数调用，继续主程序的执行</p>
+<p>函数可以将一段完成独立功能的程序封装起来。通过函数名就可执行这一段功能。使用函数可以将程序模块化</p>
+<p>What are pointers for </p>
+<p></p>
+<p>Accessing array elements.</p>
+<p></p>
+<p>Passing arguments to a function when the function needs to modify the original argument.</p>
+<p></p>
+<p>Passing arrays and strings to functions.</p>
+<p></p>
+<p>Obtaining memory from the system.</p>
+<p></p>
+<p>Creating data structures such as linked lists.</p>
+<p>Generally, system programmers aren’t willing to pay overhead for programming  convenience, so C adheres to the zero-overhead principle: what  you don’t use, you don’t pay for. The strong type system is a prime example of  a zero-overhead abstraction. It’s used only at compile time to check for program  correctness. After compile time, the types will have disappeared, and  the emitted assembly code will show no trace of the type system.</p>
+<p>The first argument to printf is always a format string. The format string  provides a template for the string to be printed, and it contains any number  of special format specifiers. Format specifiers tell printf how to interpret  and format the arguments following the format string. All format specifiers  begin with %.</p>
+<p>For example, the format specifier for an int is %d. Whenever printf sees  a %d in the format string, it knows to expect an int argument following the  format specifier. Then printf replaces the format specifier with the argument’s  actual value.</p>
+<p>Operators are functions that perform computations on operands. Operands  are simply objects.</p>
+<p>const wchar_t* ws = L"中文abc";</p>
+<p></p>
+<p></p>
+<p>大写的L是告诉编译器：这是宽字符串。所以，这时候是需要编译器根据locale来进行翻译的。</p>
+<p>左值一般在内存，右值一般在寄存器。</p>
+<p>左值：可寻址的非只读表达式；</p>
+
+<p>函数执行过程</p>
+<p>在主程序中计算每个实际参数值；</p>
+<p>用实际参数值初始化形式参数；</p>
+<p>依次执行函数体的每个语句，直到遇见return语句或函数体结束；</p>
+<p>计算return后面的表达式的值，用表达式的值构造一个临时变量；</p>
+<p>回到调用函数，用临时变量置换函数调用，继续主程序的执行；</p>
